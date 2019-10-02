@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Page Dynamic </title>
+</head>
+<body>
+<script language="JavaScript">
+	function InputPassword() {
+		coba=1;
+		var Pass; 
+		do{
+			Pass=prompt ('Masukkan Password !')
+			if (Pass=="Hanya Aku yang Tahu"){
+				alert("Hai... Selamat Datang !!");
+				window.open('coba1.html');
+				break;
+			}
+			else {
+				alert("Password ngga cocok!! Ulangi lagi!!");
+				if(coba==3){
+					alert("maaf sudah 3x !!");
+					history.go(-1);
+				}
+				coba=coba+1;
+			}
+		}
+		while (coba<=3);
+	}
+
+
+</script> 
+<form method= "POST">
+	<p><input type=button value="Password" name="B3" onclick="InputPassword()">
+	</p>
+</form>
+</body>
+</html>
